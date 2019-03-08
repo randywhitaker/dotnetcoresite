@@ -37,6 +37,7 @@ namespace dotnetcoresite
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseMiddleware<ReqMsgMiddleware>();
             app.UseMiddleware<LoggingMiddleware>();
 
             app.Map("/route", builder =>
